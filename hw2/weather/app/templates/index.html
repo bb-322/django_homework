@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+</head>
+<body>
+
+    {% if city %}
+        <h1>Country: {{ country }}</h1><br>
+        <h1>City: {{ city }}</h1><br>
+        <h1>Longitude: {{ lon }}</h1><br>
+        <h1>Latitude: {{ lat }}</h1><br>
+        <h1>Weather: {{ weather }}</h1><br>
+        <h1>Temperature (C): {{ temp }}</h1><br>
+    {% else %}
+        {{ alert|safe }}
+    {% endif %}
+</body>
+</html>
