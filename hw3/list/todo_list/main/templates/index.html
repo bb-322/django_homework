@@ -1,0 +1,17 @@
+{% load filters %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+</head>
+<body>
+    <ul>
+        {% for task in tasks|priority_filter %}
+            <li><h2>priority: {{ task.priority }} | task: {{ task.task }}</h2></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aga</title>
+</head>
+<body>
+    {% if questions %}
+        <ul>
+            {% for q in questions %}
+                <li>
+                    <a href='/polls/{{ q.id }}/'>{{ q.question_text }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Список запитань порожній</p>
+    {% endif %}
+</body>
+</html>
