@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log In</title>
+  <style>
+    body { font-family: sans-serif; background: #f5f5f5; }
+    .form-container {
+      width: 300px; margin: 100px auto; padding: 20px;
+      background: white; border-radius: 8px; box-shadow: 0 0 10px #ccc;
+    }
+    input { width: 100%; padding: 10px 0; margin: 10px 0; }
+    button { width: 100%; padding: 10px; background: #2196F3; color: white; border: none; }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Log In</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Log In</button>
+    </form>
+    <p>Don't have an account? <a href="{% url 'sign-up' %}">Register</a></p>
+  </div>
+</body>
+</html>
